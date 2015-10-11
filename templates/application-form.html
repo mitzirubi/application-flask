@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+   <title>Skills-Web</title>
+</head>
+<body>
+    <!-- This page needs a form that can capture data about the user's
+    first name, last name, job title, and salary requirements. -->
+            <h1>Application Form</h1>
+            <p id="instructions"> Fill out the form to apply for a position available: </p> 
+            
+            <form action="/application" methods="POST">
+                
+                <label>What is your First Name? 
+                <input type="text" placeholder="John" name="firstname" id="yellow">
+                </label><br>
+                
+                <label> What is your Last Name? 
+                <input class="last-name" type="text" placeholder="Doe"name="lastname" id="yellow">
+                </label> <br>
+                
+                <label> Salary Requirements
+                <input type="text" placeholder="Ex-$90,000"name="salary" id="yellow">
+                </label><br>
+                
+                <label> What position are you applying for? <br>Select only <strong>one</strong> position:<br>
+                
+                <input type="checkbox" name="position" value="Software Engineer">Software Engineer <br>
+                </label>
+                
+                <input type="checkbox" name="position" value="QA engineer">QA Engineer <br>
+                </label>
+                
+                <input type="checkbox" name="position" value="Product Manager">Product Manager <br>
+                </label>
+                
+                <input id="submit" name="submit" value="submit" type="submit">
+            </form>
+</body>
+</html>
